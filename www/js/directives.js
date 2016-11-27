@@ -5,8 +5,7 @@ angular.module('starter.directives', [])
 		restrict: 'E',
 		replace: true,
 		transclude: true,
-		template: 	`<div id="_joystick" style='position: relative; height:500pt'>`	 +
-					`</div>`,
+		template:"<div id='_joystick' style='position: relative; height:500pt'> </div>",
 		link: function(scope, tElement, attrs){
 
 			var radius = 50;

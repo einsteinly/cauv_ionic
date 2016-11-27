@@ -39,8 +39,11 @@ angular.module('starter.services', [])
   socket.connected = false;
   return {
     connect: function(ipAddress, callback){
-      socket = io('ws://' + ipAddress);
+      socket = io('http://' + ipAddress);
+      // console.dir(socket);
+      // console.log( "connecting to ws://"+ ipAddress);
       socket.on('connection', function(data){
+        // console.dir(socket);
         socket.connected = true;
         callback(data);
       })
